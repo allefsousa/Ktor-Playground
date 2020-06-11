@@ -22,12 +22,7 @@ fun Application.loanModule() {
     }
 
     install(ContentNegotiation) {
-        //        jackson {
-//            enable(SerializationFeature.INDENT_OUTPUT)
-//            propertyNamingStrategy = PropertyNamingStrategy.SNAKE_CASE
-//        }
 
-        // see https://ktor.io/servers/features/content-negotiation/gson.html
         gson {
             setPrettyPrinting()
             setFieldNamingPolicy(FieldNamingPolicy.LOWER_CASE_WITH_UNDERSCORES)
